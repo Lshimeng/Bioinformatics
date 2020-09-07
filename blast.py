@@ -1,10 +1,10 @@
 import os
-os.chdir("/home/lshimeng/work/ugt/12/tree/blast/")
+os.chdir("/home/…")
 from Bio import SeqIO
 from Bio.Blast import NCBIWWW
 import time
 SeqNumber = 0
-for record in SeqIO.parse("12.seq", "fasta"):
+for record in SeqIO.parse("name.seq", "fasta"):
     SeqNumber += 1
     try:
         result_handle = NCBIWWW.qblast("blastp", "pdb", record.seq)
